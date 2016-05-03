@@ -26,7 +26,7 @@ min_amount = {'doge': 2.0, 'ltc': 0.002, 'btc': 0.0002}
 def log(line):
         print line
         logFile = open('slackbot.log', 'ab+')
-        logFile.write(line)
+        logFile.write("\n"+line)
         logFile.close()
 def tip(command, splitmessage, tipindex, id2name, name2id):
         if len(splitmessage) < (tipindex + 4):
